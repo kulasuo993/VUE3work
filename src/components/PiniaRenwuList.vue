@@ -1,4 +1,5 @@
 <template>
+    <p>6660</p>
      <div v-if="show">
         <ul  v-for="(item,index) in props.list" :key="item.id">
             <li>
@@ -37,6 +38,8 @@
         <el-button type="danger" @click="ShowAll()"  size="small" class="cleanup">显示全部</el-button>
         <el-button type="danger" @click="dltChecked()"  size="small" class="cleanup">清除已完成任务</el-button>
     </div> 
+    <!-- {{ num }} -->
+    {{ j }}
   </template>
   
   <script setup>
@@ -52,6 +55,7 @@
     const show1 = ref(false)
     const finishNum = ref(0)
     const finishNum1 = ref(0)
+    const j = ref(0)
     const isAllcheck = ref(false)
     const itemCheck = ()=>{
         const num = ref(0)
@@ -104,6 +108,7 @@
         }
     }
     const dlt1 = (id,index)=>{
+        console.log(id,index)
         list2.splice(index,1)
         itemCheck1()
         if(list2.length === 0){
@@ -137,7 +142,7 @@
             }
         }
         emit('deletehas', list2)
-        itemCheck()
+        itemCheck()   
         itemCheck1()
     }
   </script>

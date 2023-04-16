@@ -1,4 +1,6 @@
 import { createApp } from 'vue'
+import { createPinia } from 'pinia'
+
 import './style.css'
 import App from './App.vue'
 
@@ -13,5 +15,8 @@ let app = createApp(App)
 
 app.use(ElementPlus) // 使用ElementPlus
 app.use(router) // 注册路由
+
+const pinia = createPinia()
+app.use(pinia)
 
 app.mount('#app')

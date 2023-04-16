@@ -30,6 +30,5 @@
 
 <script setup>
     import {asyncRoutes} from '@/router/index.js'
-    console.log(asyncRoutes)
     
 </script>

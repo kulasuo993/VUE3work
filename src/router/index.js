@@ -28,9 +28,15 @@ export const asyncRoutes = [
             component: () => import('@/views/renwu/list.vue'),
             name: 'renwuList',
             meta: { title: '任务1'}
+          },
+          {
+            path: '/renwu/piniaList',
+            component: () => import('@/views/renwu/piniaList.vue'),
+            name: 'piniaList',
+            meta: { title: 'pinia'}
           }
         ]
-    },
+    }
 ]
 
 const router = createRouter({
